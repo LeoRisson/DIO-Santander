@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CourseListComponent } from './course-list.component';
 import { CourseInfoComponent } from './course-info.component';
 import { RouterModule } from '@angular/router';
@@ -23,7 +23,7 @@ import { AppPipeModule } from '../shared/pipe/app-pipe.module';
             },
             {
                 path: 'courses/info/:id', component: CourseInfoComponent
-            }
+            },
         ])
     ]
 })
