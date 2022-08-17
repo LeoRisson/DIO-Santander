@@ -1,7 +1,8 @@
 import { Course } from './course';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 
 
 @Injectable({
@@ -11,7 +12,7 @@ export class CourseService {
 
     private coursesUrl: string = 'http://localhost:3100/api/courses';
 
-    constructor(private httpClient: HttpClient) { }
+    constructor(private httpClient: HttpClientModule) { }
 
     retrieveAll(): Observable<Course[]> {
         return this.httpClient.get<Course[]>(this.coursesUrl);
